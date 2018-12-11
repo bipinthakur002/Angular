@@ -1,28 +1,22 @@
 function Armstrong1(value: number): number {
     var ans: number = 0
-    var temp: number = value
+    var temp: number = Math.floor(value) 
     var rem: number = 0
 
+    
 
-    while (~~value != 0) {
-        rem = value % 10
+    while ( temp > 0) {
+        rem = Math.floor(temp % 10)
         ans += (rem * rem * rem)
-        value /= 10
+        temp /= 10
     }
-    console.log(~~ans)
-    if (ans == temp) 
-    {
-        return 1
-    }
-    else
-    {
-        return 0
-    }
+    
+    return ans
 }
 var iRet: number = 0
-var value: number = 153
-iRet = Armstrong1(~~value)
-if (iRet == 1) {
+var value: number = 371
+iRet = Armstrong1(value)
+if (iRet == value) {
     console.log("It is armstrong number")
 }
 else {

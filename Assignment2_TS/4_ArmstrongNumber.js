@@ -1,24 +1,18 @@
 function Armstrong1(value) {
     var ans = 0;
-    var temp = value;
+    var temp = Math.floor(value);
     var rem = 0;
-    while (~~value != 0) {
-        rem = value % 10;
+    while (temp > 0) {
+        rem = Math.floor(temp % 10);
         ans += (rem * rem * rem);
-        value /= 10;
+        temp /= 10;
     }
-    console.log(~~ans);
-    if (ans == temp) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+    return ans;
 }
 var iRet = 0;
-var value = 153;
-iRet = Armstrong1(~~value);
-if (iRet == 1) {
+var value = 371;
+iRet = Armstrong1(value);
+if (iRet == value) {
     console.log("It is armstrong number");
 }
 else {
