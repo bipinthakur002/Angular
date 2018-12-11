@@ -1,19 +1,19 @@
-function Maximum(val1:number,val2:number,val3:number):number
+function Maximum(array:number[]) : number
 {
-    if((val1 > val2)&&(val1 > val3))
+    var max:number = 0
+
+    for(var  i = 0; i < array.length ; i++)
     {
-        return val1
+            if(array[i] > max)
+            {
+                max = array[i]
+            }
+
     }
-    else if ((val2 > val1)&&(val2 > val3))
-    {
-        return val2
-    }
-    else
-    {
-        return val3;
-    }
+    return max
 }
 
-var iRet = null
-iRet=Maximum(12,13,14)
-console.log("Maximum Among Given Number is:"+iRet)
+var iRet:number = null
+var array:number[] = [29,89,6,29,56,45,77,32]
+iRet = Maximum(array)
+console.log("Maximum Element is :"+iRet)
