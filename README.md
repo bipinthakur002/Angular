@@ -1,2 +1,2 @@
 # Angular
-Programming With TypeScript and learning some basic application build using MEAN Stack 
+Programming With TypeScript and building some basic application using MEAN Stack 
